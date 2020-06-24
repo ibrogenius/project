@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&family=Tangerine:wght@700&display=swap');
+.pa {
+    text-align: center;
+    font-family: 'Lakki Reddy', cursive;
+    /*font-family: 'Tangerine', cursive; */
+}
+
+body {
+    font-family: 'Pacifico', cursive;
+}
+
+.svelte {
+    font-family: fantasy;
+}
+
+h2 {
+    font-family: fantasy;
+    margin: 0;
+}
+
+.start {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(154, 73, 73);
+    width: 100%;
+    margin: 10px 0px;
+}
+
+button {
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+    cursor: pointer;
+}
+
+.sr-only {
+    display: none;
+}
+
+.start[disabled] {
+    background-color: #fd3131;
+    cursor: not-allowed;
+}
+
+.skk {
+    text-align: center;
+}
