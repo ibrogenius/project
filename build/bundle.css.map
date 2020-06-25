@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\..\\App.svelte",
+    "..\\..\\HowTo.svelte",
+    "..\\..\\ProgressBar.svelte",
+    "..\\..\\Quote.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\r\n  import Timer from \"./Timer.svelte\";\r\n  import HowTo from \"./HowTo.svelte\";\r\n  import Quote from \"./Quote.svelte\";\r\n</script>\r\n\r\n<style>\r\n  h1,\r\n  h3 {\r\n    text-align: center;\r\n  }\r\n  small {\r\n    font-family: fantasy;\r\n    font-size: 10px;\r\n  }\r\n  a {\r\n    text-decoration: none;\r\n  }\r\n</style>\r\n\r\n<h1>\r\n  Inu John\r\n  <small>\r\n    <a href=\"https://blacklivesmatter.com/\">BLACK LIVES MATTER</a>\r\n  </small>\r\n</h1>\r\n\r\n<Timer />\r\n\r\n<HowTo />\r\n\r\n<h3 class=\"svelte\">\r\n  <a href=\"https://www.who.int/gpsc/clean_hands_protection/en/\">Picture Link</a>\r\n  <a href=\"https://freesound.org/people/metrostock99/sounds/345086\">\r\n    Sound Link\r\n  </a>\r\n</h3>\r\n\r\n<Quote />\r\n",
+    "<style>\r\n  img {\r\n    max-width: 100%;\r\n  }\r\n</style>\r\n\r\n<div bp=\"grid\">\r\n  <img bp=\"offset-5@md 4@md 12@sm\" src=\"john.jpg\" alt=\"HandWashing App\" />\r\n</div>\r\n",
+    "<script>\r\n  export let progress = 0;\r\n</script>\r\n\r\n<style>\r\n  .progress-container {\r\n    margin: 20px 0;\r\n    border: solid #f30f0f 1px;\r\n  }\r\n  .progress-bar {\r\n    height: 30px;\r\n    background-color: #971329;\r\n  }\r\n</style>\r\n\r\n<div bp=\"grid\">\r\n  <div bp=\"offset-5@md 4@md 12@sm\" class=\"progress-container\">\r\n    <div class=\"progress-bar\" style=\"width: {progress}%;\">\r\n      <span class=\"sr-only\">{progress}%</span>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+    "<script>\r\n  let quotes = [\r\n    \"BLACKS ARE CRYING\",\r\n    \"BLACK LIVES MATTERS\",\r\n    \"STOP RAPING OUR WOMEN\",\r\n    \"WE ARE IMPORTANT\",\r\n    \"STOP RACISM\",\r\n    \"STOP TRIBALISM\",\r\n    \"STOP DISCRIMINATING\"\r\n  ];\r\n  let random;\r\n  function quote() {\r\n    random = Math.floor(Math.random() * quotes.length);\r\n    document.getElementById(\"johnny\").innerHTML = quotes[random];\r\n  }\r\n</script>\r\n\r\n<style>\r\n  .blm {\r\n    border: none;\r\n    color: #fff;\r\n    padding: 15px 32px;\r\n    text-align: center;\r\n    text-decoration: none;\r\n    display: inline-block;\r\n    font-size: 16px;\r\n    outline: none;\r\n    flex: 1;\r\n    cursor: pointer;\r\n    background-color: rgb(223, 20, 20);\r\n  }\r\n  .blm:hover {\r\n    background-color: chartreuse;\r\n    color: #000;\r\n  }\r\n</style>\r\n\r\n<div bp=\"grid\">\r\n  <main bp=\"offset-5@md 4@md 12@sm\">\r\n    <p class=\"pa\" id=\"johnny\">...</p>\r\n  </main>\r\n</div>\r\n\r\n<div bp=\"grid\">\r\n  <button bp=\"offset-5@md 4@md 12@sm\" class=\"blm\" on:click={quote}>\r\n    Black Lives Matter\r\n  </button>\r\n</div>\r\n"
+  ],
+  "names": [],
+  "mappings": "AAOE,gBAAE,CACF,EAAE,cAAC,CAAC,AACF,UAAU,CAAE,MAAM,AACpB,CAAC,AACD,KAAK,cAAC,CAAC,AACL,WAAW,CAAE,OAAO,CACpB,SAAS,CAAE,IAAI,AACjB,CAAC,AACD,CAAC,cAAC,CAAC,AACD,eAAe,CAAE,IAAI,AACvB,CAAC;AChBD,GAAG,eAAC,CAAC,AACH,SAAS,CAAE,IAAI,AACjB,CAAC;ACED,mBAAmB,cAAC,CAAC,AACnB,MAAM,CAAE,IAAI,CAAC,CAAC,CACd,MAAM,CAAE,KAAK,CAAC,OAAO,CAAC,GAAG,AAC3B,CAAC,AACD,aAAa,cAAC,CAAC,AACb,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAAE,OAAO,AAC3B,CAAC;ACMD,IAAI,cAAC,CAAC,AACJ,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,UAAU,CAAE,MAAM,CAClB,eAAe,CAAE,IAAI,CACrB,OAAO,CAAE,YAAY,CACrB,SAAS,CAAE,IAAI,CACf,OAAO,CAAE,IAAI,CACb,IAAI,CAAE,CAAC,CACP,MAAM,CAAE,OAAO,CACf,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,AACpC,CAAC,AACD,kBAAI,MAAM,AAAC,CAAC,AACV,gBAAgB,CAAE,UAAU,CAC5B,KAAK,CAAE,IAAI,AACb,CAAC"
+}
